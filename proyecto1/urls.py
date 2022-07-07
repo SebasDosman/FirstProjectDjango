@@ -25,5 +25,6 @@ urlpatterns = [
     path('ruta3/', views.vista3, name = 'vista3'),
     path('ruta4/', views.vista4, name = 'vista4'),
     path('', views.vista5, name = 'vista5'),
-    path('formulario/', views.vista6, name = 'vista6')
+    path('formulario/', views.vista6, name = 'vista6'),
+    path('paginas/', include('aplicacion1.urls')),
 ]

@@ -27,4 +27,21 @@ def vista5(request):
 def vista6(request):
     formulario = forms.Formulario()
     diccionario = {'formulario': formulario}
+    
+    if request.method == 'POST':
+        formulario1 = forms.Formulario(request.POST)
+        if formulario1.is_valid():
+            nombre = formulario1.cleaned_data['nombre']
+            correo = formulario1.cleaned_data['email']
+            print("Nombre = " + nombre)
+            print("Correo = " + correo)
+    
     return render(request, "aplicacion1/formulario.html", context = diccionario)
+
+def pagina4(request):
+    diccionario = {}
+    return render(request, "aplicacion1/pagina4.html", context = diccionario)
+
+def pagina5(request):
+    diccionario = {}
+    return render(request, "aplicacion1/pagina5.html", context = diccionario)
