@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulario</title>
+    {% comment %} <link rel="stylesheet" href="{% static "css/style1.css" %}"> {% endcomment %}
+  </head>
+  <body>
+    <h3>Datos del formulario</h3>
+    {{ formulario }}
+    {% csrf_token %}
+  </body>
+</html>
